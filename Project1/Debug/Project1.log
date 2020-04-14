@@ -1,0 +1,4 @@
+﻿  main.cpp
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(11,6): warning C4101:  'numArith': unreferenced local variable
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(10,6): warning C4101:  'iterNum': unreferenced local variable
+  Project1.vcxproj -> Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Debug\Project1.exe
