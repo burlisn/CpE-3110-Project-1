@@ -4,13 +4,27 @@
 
 #include <iostream>
 #include <bitset>
+#include <fstream> //to read from files
+#include <string>
 #include "Header.h"
+
 using namespace std;
 
 int main()
 {
 	int iterNum; // number of iterations
 	int numArith; // number of additions/subtractions
+
+	ifstream file{ "data.txt" };
+	string testinput;
+
+	while (file)
+	{
+		file >> testinput;
+		cout << testinput << " ";
+		file >> testinput;
+		cout << testinput << endl;
+	}
 
 
 	bitset<8> b1 = 0b00011001;

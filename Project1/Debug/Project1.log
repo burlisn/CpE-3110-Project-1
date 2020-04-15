@@ -1,4 +1,7 @@
 ﻿  main.cpp
-Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(14,6): warning C4101: 'numArith': unreferenced local variable
-Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(13,6): warning C4101: 'iterNum': unreferenced local variable
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(16,6): warning C4101: 'numArith': unreferenced local variable
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(15,6): warning C4101: 'iterNum': unreferenced local variable
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Functions.hpp(10,22): warning C4018: '<': signed/unsigned mismatch
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Functions.hpp(30): message : see reference to function template instantiation 'std::bitset<8> add_bitset<8>(const std::bitset<8>,const std::bitset<8>)' being compiled
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(34): message : see reference to function template instantiation 'std::bitset<8> two_comp<8>(const std::bitset<8>)' being compiled
   Project1.vcxproj -> Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Debug\Project1.exe
