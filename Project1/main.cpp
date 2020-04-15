@@ -15,17 +15,26 @@ int main()
 	int iterNum; // number of iterations
 	int numArith; // number of additions/subtractions
 
+	// ----------------SECTION PURELY FOR TESTING RN -------------------
 	ifstream file{ "data.txt" };
 	string testinput;
+
+	bitset <12> b_1, b_2;
 
 	while (file)
 	{
 		file >> testinput;
-		cout << testinput << " ";
+		string_to_bits(b_1, testinput);
+		cout << b_1 << " ";
+
 		file >> testinput;
-		cout << testinput << endl;
+		string_to_bits(b_2, testinput);
+		cout << b_2 << endl;
 	}
 
+
+
+	// ------------------------------------------------------------------
 
 	bitset<8> b1 = 0b00011001;
 	bitset<8> b2 = 0b00000111;

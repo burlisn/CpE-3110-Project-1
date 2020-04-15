@@ -50,18 +50,26 @@ void string_to_bits(bitset<T> &b1, string input)
     int number =0;
     b1 = 0;
 
+    // Portion takes care of leading zeros if input is not size 12
+    int leadingZeros = T - input.size();
+    int numberSize = T - (T-input.size());
 
-    for(int i = 0; i < T; i++)
+    for (int i = T-1; i >= leadingZeros; i--)
+    {
+        b1[i] = 0;
+    }
+
+    for(int i = 0; i < input.size(); i++)
     {
         number = input[i];
         if (number == 49)
         {
-            b1[T-i-1] = 1;
+            b1[numberSize-i-1] = 1;
         }
 
         else if(number == 48)
         {
-            b1[T-i-1] = 0;
+            b1[numberSize-i-1] = 0;
         }
         else
         {
