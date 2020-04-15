@@ -25,6 +25,13 @@ int main()
 	cout << b1 << endl << b2 <<endl;
 	
 
+	string test = "10000000";
+	bitset<8> b3 = 0b11111111;
+
+	string_to_bits(b3, test);
+
+	cout << b3 << endl;
+
 	return 0;
 }
 

@@ -43,3 +43,30 @@ void shift_db_bitset(bitset<T> &b1, bitset<T> &b2)
     b2[T-1] = last_bit;
 
 }
+
+template <size_t T>
+void string_to_bits(bitset<T> &b1, string input)
+{
+    int number =0;
+    b1 = 0;
+
+
+    for(int i = 0; i < T; i++)
+    {
+        number = input[i];
+        if (number == 49)
+        {
+            b1[T-i-1] = 1;
+        }
+
+        else if(number == 48)
+        {
+            b1[T-i-1] = 0;
+        }
+        else
+        {
+            throw out_of_range("non binary string");
+        }
+    
+    }
+}
