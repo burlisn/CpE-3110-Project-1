@@ -1,6 +1,4 @@
 
-#include "Header.h"
-
 
 template <size_t T>
 bitset<T> add_bitset(const bitset<T> b1, const bitset<T> b2)
@@ -29,7 +27,7 @@ bitset<T> two_comp(const bitset<T> b1)
     bitset<T> comp = ~b1;
     bitset<T> plus_one = 1;
     
-    comp = add_bitset(b1,plus_one);
+    comp = add_bitset(comp,plus_one);
 
     return comp;
 
@@ -38,8 +36,8 @@ bitset<T> two_comp(const bitset<T> b1)
 template <size_t T>
 void shift_db_bitset(bitset<T> &b1, bitset<T> &b2)
 {
-    bool last_bit = 0;
-    b1[0] = last_bit;
+    bool last_bit = b1[0];
+
     b1 >>= 1;
     b2 >>= 1;
     b2[T-1] = last_bit;
