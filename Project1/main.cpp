@@ -3,7 +3,10 @@
 // Assignment:  Project 1
 
 #include <iostream>
+#include <bitset>
 using namespace std;
+
+void bittest(bitset<8> x);
 
 int main()
 {
@@ -11,4 +14,9 @@ int main()
 	int numArith; // number of additions/subtractions
 
 	return 0;
+}
+
+void bittest(bitset<8> x)
+{
+	return;
 }
