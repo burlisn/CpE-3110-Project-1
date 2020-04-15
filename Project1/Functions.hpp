@@ -39,6 +39,8 @@ void shift_db_bitset(bitset<T> &b1, bitset<T> &b2, bitset<1> &c_out) //b1 more s
     b1[T - 1] = c_out[0];
     b2[T-1] = last_bit;
 
+    c_out = 0; //c_out gets reset to 0 after shift
+
 }
 
 template <size_t T>
@@ -74,5 +76,25 @@ void string_to_bits(bitset<T> &b1, string input)
             throw out_of_range("non binary string");
         }
     
+    }
+}
+
+template <size_t T>
+void add_and_shift(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp, bitset<1>& c_out)
+{
+    r1 = 0; // Initialized r1 to 0s
+    r2 = mp; // Initialize r2 to multiplier
+
+    for (int i = 0; i < 12; i++)
+    {
+        if (r2[0] == 1)
+        {
+            r1 = add_bitset(r1, mc, c_out);
+            shift_db_bitset(r1, r2, c_out);
+        }
+        else if (r2[0] == 0)
+        {
+            shift_db_bitset(r1, r2, c_out);
+        }
     }
 }
