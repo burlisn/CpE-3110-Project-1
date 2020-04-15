@@ -6,8 +6,6 @@
 #include <bitset>
 using namespace std;
 
-void bittest(bitset<8> x);
-
 int main()
 {
 	int iterNum; // number of iterations
@@ -16,7 +14,3 @@ int main()
 	return 0;
 }
 
-void bittest(bitset<8> x)
-{
-	return;
-}
