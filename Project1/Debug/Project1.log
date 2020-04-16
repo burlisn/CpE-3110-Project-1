@@ -1,4 +1,8 @@
 ﻿  main.cpp
-Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(14,6): warning C4101: 'numArith': unreferenced local variable
-Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(13,6): warning C4101: 'iterNum': unreferenced local variable
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Functions.hpp(56,25): warning C4018: '>=': signed/unsigned mismatch
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(38): message : see reference to function template instantiation 'void string_to_bits<4>(std::bitset<4> &,std::string)' being compiled
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Functions.hpp(62,22): warning C4018: '<': signed/unsigned mismatch
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Functions.hpp(9,22): warning C4018: '<': signed/unsigned mismatch
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Functions.hpp(95): message : see reference to function template instantiation 'std::bitset<4> add_bitset<4>(const std::bitset<4>,const std::bitset<4>,std::bitset<1> &)' being compiled
+Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\main.cpp(46): message : see reference to function template instantiation 'void add_and_shift<4>(std::bitset<4> &,std::bitset<4> &,std::bitset<4> &,std::bitset<4> &,std::bitset<1> &)' being compiled
   Project1.vcxproj -> Z:\SS 2020\CpE 3110\CpE-3110-Project-1\Project1\Debug\Project1.exe
