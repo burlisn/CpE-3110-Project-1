@@ -40,13 +40,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp4, testinput);
-			cout << mp4 << endl;
+			cout << mp4 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_4, r2_4, mc4, mp4, c_out);
-			cout << "Add and shift results: \n" << r1_4 << r2_4 << endl;
+			cout << r1_4 << r2_4 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_4, r2_4, mc4, mp4);
-			cout << "Booth's algorithm results: \n" << r1_4 << r2_4 << endl << endl;
+			cout << r1_4 << r2_4 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
 		case 5:
@@ -55,13 +58,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp5, testinput);
-			cout << mp5 << endl;
+			cout << mp5 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_5, r2_5, mc5, mp5, c_out);
-			cout << "Add and shift results: \n" << r1_5 << r2_5 << endl;
+			cout << r1_5 << r2_5 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_5, r2_5, mc5, mp5);
-			cout << "Booth's algorithm results: \n" << r1_5 << r2_5 << endl << endl;
+			cout << r1_5 << r2_5 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
 		case 6:
@@ -70,13 +76,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp6, testinput);
-			cout << mp6 << endl;
+			cout << mp6 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_6, r2_6, mc6, mp6, c_out);
-			cout << "Add and shift results: \n" << r1_6 << r2_6 << endl;
+			cout << r1_6 << r2_6 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_6, r2_6, mc6, mp6);
-			cout << "Booth's algorithm results: \n" << r1_6 << r2_6 << endl << endl;
+			cout << r1_6 << r2_6 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
 		case 7:
@@ -85,13 +94,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp7, testinput);
-			cout << mp7 << endl;
+			cout << mp7 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_7, r2_7, mc7, mp7, c_out);
-			cout << "Add and shift results: \n" << r1_7 << r2_7 << endl;
+			cout << r1_7 << r2_7 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_7, r2_7, mc7, mp7);
-			cout << "Booth's algorithm results: \n" << r1_7 << r2_7 << endl << endl;
+			cout << r1_7 << r2_7 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
 		case 8:
@@ -100,13 +112,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp8, testinput);
-			cout << mp8 << endl;
+			cout << mp8 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_8, r2_8, mc8, mp8, c_out);
-			cout << "Add and shift results: \n" << r1_8 << r2_8 << endl;
+			cout << r1_8 << r2_8 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_8, r2_8, mc8, mp8);
-			cout << "Booth's algorithm results: \n" << r1_8 << r2_8 << endl << endl;
+			cout << r1_8 << r2_8 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
 		case 9:
@@ -115,13 +130,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp9, testinput);
-			cout << mp9 << endl;
+			cout << mp9 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_9, r2_9, mc9, mp9, c_out);
-			cout << "Add and shift results: \n" << r1_9 << r2_9 << endl;
+			cout << r1_9 << r2_9 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_9, r2_9, mc9, mp9);
-			cout << "Booth's algorithm results: \n" << r1_9 << r2_9 << endl << endl;
+			cout << r1_9 << r2_9 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
 		case 10:
@@ -130,13 +148,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp10, testinput);
-			cout << mp10 << endl;
+			cout << mp10 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_10, r2_10, mc10, mp10, c_out);
-			cout << "Add and shift results: \n" << r1_10 << r2_10 << endl;
+			cout << r1_10 << r2_10 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_10, r2_10, mc10, mp10);
-			cout << "Booth's algorithm results: \n" << r1_10 << r2_10 << endl << endl;
+			cout << r1_10 << r2_10 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
 		case 11:
@@ -145,13 +166,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp11, testinput);
-			cout << mp11 << endl;
+			cout << mp11 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_11, r2_11, mc11, mp11, c_out);
-			cout << "Add and shift results: \n" << r1_11 << r2_11 << endl;
+			cout << r1_11 << r2_11 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_11, r2_11, mc11, mp11);
-			cout << "Booth's algorithm results: \n" << r1_11 << r2_11 << endl << endl;
+			cout << r1_11 << r2_11 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
 		case 12:
@@ -160,13 +184,16 @@ int main()
 
 			file >> testinput;
 			string_to_bits(mp12, testinput);
-			cout << mp12 << endl;
+			cout << mp12 << endl << endl;
 
+			cout << "Add and shift:" << endl;
 			add_and_shift(r1_12, r2_12, mc12, mp12, c_out);
-			cout << "Add and shift results: \n" << r1_12 << r2_12 << endl;
+			cout << r1_12 << r2_12 << endl << endl;
 
+			cout << "Booth's algorithm:" << endl;
 			booths(r1_12, r2_12, mc12, mp12);
-			cout << "Booth's algorithm results: \n" << r1_12 << r2_12 << endl << endl;
+			cout << r1_12 << r2_12 << endl << endl;
+			cout << "----------------------------------------------------" << endl << endl;
 			break;
 		}
 		file >> testinput;

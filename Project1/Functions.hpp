@@ -82,6 +82,9 @@ void string_to_bits(bitset<T> &b1, string input)
 template <size_t T>
 void add_and_shift(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp, bitset<1>& c_out)
 {
+    int iterNum = 0; // number of iterations
+    int numArith = 0; // number of additions/subtractions
+
     r1 = 0; // Initialized r1 to 0s
     r2 = mp; // Initialize r2 to multiplier
 
@@ -90,13 +93,19 @@ void add_and_shift(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp, b
         if (r2[0] == 1)
         {
             r1 = add_bitset(r1, mc, c_out);
+            numArith++;
+
             shift_db_bitset(r1, r2, c_out);
+            iterNum++;
         }
         else if (r2[0] == 0)
         {
             shift_db_bitset(r1, r2, c_out);
+            iterNum++;
         }
     }
+    cout << "Iteration number: " << iterNum << endl;
+    cout << "Number of additions/subtractions: " << numArith << endl;
     return;
 }
 
@@ -109,6 +118,8 @@ void booths(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp)
     bitset<T> mcComp = two_comp(mc);
     r1 = 0; //Initialized r1 to 0s
     r2 = mp; //Initialize r2 to multiplier
+    int iterNum = 0; // number of iterations
+    int numArith = 0; // number of additions/subtractions
 
     for (int i = 0; i < T; i++)
     {
@@ -116,29 +127,39 @@ void booths(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp)
         {
             c_out[0] = bBit[0];
             shift_db_bitset(r1, r2, c_out);
+            iterNum++;
         }
         else if (r2[0] == 1 && eBit == 0)
         {
             r1=add_bitset(mcComp, r1, c_out);
+            numArith++;
             bBit ^= 0b1;
             bBit ^= c_out;
             c_out[0] = bBit[0];
             eBit = r2[0];
             shift_db_bitset(r1, r2, c_out);
+            iterNum++;
         }
         else
         {
             r1 = add_bitset(mc, r1, c_out);
+            numArith++;
             bBit ^= 0b0;
             bBit ^= c_out;
             c_out[0] = bBit[0];
             eBit = r2[0];
             shift_db_bitset(r1, r2, c_out);
+            iterNum++;
         }
     }
     //I HAVE NO IDEA WHY THIS LAST PART WORKS, BUT IT DOES, DON'T TOUCH IT!!
     if (bBit[0] == 0b1) {
         r1 = add_bitset(mc, r1, c_out);
+        numArith++;
     }
+
+    cout << "Iteration number: " << iterNum << endl;
+    cout << "Number of additions/subtractions: " << numArith << endl;
+
     return;
 }
