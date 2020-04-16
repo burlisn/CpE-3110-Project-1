@@ -1,6 +1,12 @@
-// Programmers: Nathan Burlis & Carter Scranton
+//////////////////////////////////////////////////////////////////////
+/// @file Main.cpp
+/// @author Nathan Burlis & Carter Scranton 
+/// @brief main funtcion
 // Class:		CpE 3110
 // Assignment:  Project 1
+//////////////////////////////////////////////////////////////////////
+
+
 
 #include <iostream>
 #include <bitset>
