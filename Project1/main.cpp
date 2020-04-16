@@ -24,6 +24,7 @@ int main()
 	ifstream file{ "data.txt" };
 	string testinput;
 
+	//bitsets for every posible length
 	bitset <4> mc4, mp4, r1_4, r2_4; //mc=multiplicand, mp=multiplier, r1=more significant resulst, r2=less significant result
 	bitset <5> mc5, mp5, r1_5, r2_5;
 	bitset <6> mc6, mp6, r1_6, r2_6;
@@ -37,29 +38,30 @@ int main()
 
 	file >> testinput; //DO NOT DELTE, "PART" OF WHILE LOOP TO MAKE SURE READING IS CORRECT!!!
 	while (file)
-	{
+	{	
+		//switch case that determins what length of bitset is used
 		switch (testinput.length())
 		{
-		case 4:
-			string_to_bits(mc4, testinput);
+		case 4:	//length of 4
+			string_to_bits(mc4, testinput); //load values into bitset
 			cout << mc4 << " ";
 
 			file >> testinput;
 			string_to_bits(mp4, testinput);
 			cout << mp4 << endl << endl;
 
-			cout << "Add and shift:" << endl;
-			add_and_shift(r1_4, r2_4, mc4, mp4, c_out);
+			cout << "Add and shift:" << endl; 
+			add_and_shift(r1_4, r2_4, mc4, mp4, c_out); //preform add_and_shift
 			cout << r1_4 << r2_4 << endl << endl;
 
-			cout << "Booth's algorithm:" << endl;
-			booths(r1_4, r2_4, mc4, mp4);
+			cout << "Booth's algorithm:" << endl; 
+			booths(r1_4, r2_4, mc4, mp4); //preform Booth's algorithm
 			cout << r1_4 << r2_4 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
-		case 5:
-			string_to_bits(mc5, testinput);
+		case 5:	//length of 5
+			string_to_bits(mc5, testinput); //load values into bitset
 			cout << mc5 << " ";
 
 			file >> testinput;
@@ -67,35 +69,35 @@ int main()
 			cout << mp5 << endl << endl;
 
 			cout << "Add and shift:" << endl;
-			add_and_shift(r1_5, r2_5, mc5, mp5, c_out);
+			add_and_shift(r1_5, r2_5, mc5, mp5, c_out); //preform add_and_shift
 			cout << r1_5 << r2_5 << endl << endl;
 
-			cout << "Booth's algorithm:" << endl;
-			booths(r1_5, r2_5, mc5, mp5);
+			cout << "Booth's algorithm:" << endl; 
+			booths(r1_5, r2_5, mc5, mp5); //preform Booth's algorithm
 			cout << r1_5 << r2_5 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
-		case 6:
-			string_to_bits(mc6, testinput);
+		case 6:		//length of 6
+			string_to_bits(mc6, testinput); //load values into bitset
 			cout << mc6 << " ";
 
 			file >> testinput;
 			string_to_bits(mp6, testinput);
 			cout << mp6 << endl << endl;
 
-			cout << "Add and shift:" << endl;
-			add_and_shift(r1_6, r2_6, mc6, mp6, c_out);
+			cout << "Add and shift:" << endl; 
+			add_and_shift(r1_6, r2_6, mc6, mp6, c_out); //preform add_and_shift
 			cout << r1_6 << r2_6 << endl << endl;
 
-			cout << "Booth's algorithm:" << endl;
-			booths(r1_6, r2_6, mc6, mp6);
+			cout << "Booth's algorithm:" << endl; 
+			booths(r1_6, r2_6, mc6, mp6); //preform Booth's algorithm
 			cout << r1_6 << r2_6 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
-		case 7:
-			string_to_bits(mc7, testinput);
+		case 7: 	//length of 7
+			string_to_bits(mc7, testinput); //load values into bitset
 			cout << mc7 << " ";
 
 			file >> testinput;
@@ -103,17 +105,17 @@ int main()
 			cout << mp7 << endl << endl;
 
 			cout << "Add and shift:" << endl;
-			add_and_shift(r1_7, r2_7, mc7, mp7, c_out);
+			add_and_shift(r1_7, r2_7, mc7, mp7, c_out); //preform add_and_shift
 			cout << r1_7 << r2_7 << endl << endl;
 
-			cout << "Booth's algorithm:" << endl;
-			booths(r1_7, r2_7, mc7, mp7);
+			cout << "Booth's algorithm:" << endl; 
+			booths(r1_7, r2_7, mc7, mp7); //preform Booth's algorithm
 			cout << r1_7 << r2_7 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
-		case 8:
-			string_to_bits(mc8, testinput);
+		case 8: 	//length of 8
+			string_to_bits(mc8, testinput); //load values into bitsets
 			cout << mc8 << " ";
 
 			file >> testinput;
@@ -121,17 +123,17 @@ int main()
 			cout << mp8 << endl << endl;
 
 			cout << "Add and shift:" << endl;
-			add_and_shift(r1_8, r2_8, mc8, mp8, c_out);
+			add_and_shift(r1_8, r2_8, mc8, mp8, c_out);	//preform add_and_shift
 			cout << r1_8 << r2_8 << endl << endl;
 
-			cout << "Booth's algorithm:" << endl;
-			booths(r1_8, r2_8, mc8, mp8);
+			cout << "Booth's algorithm:" << endl;	
+			booths(r1_8, r2_8, mc8, mp8); //preform Booth's algorithm
 			cout << r1_8 << r2_8 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
-		case 9:
-			string_to_bits(mc9, testinput);
+		case 9:		//length of 9
+			string_to_bits(mc9, testinput); //load values into bitset
 			cout << mc9 << " ";
 
 			file >> testinput;
@@ -139,17 +141,17 @@ int main()
 			cout << mp9 << endl << endl;
 
 			cout << "Add and shift:" << endl;
-			add_and_shift(r1_9, r2_9, mc9, mp9, c_out);
+			add_and_shift(r1_9, r2_9, mc9, mp9, c_out); //preform add_and_shift
 			cout << r1_9 << r2_9 << endl << endl;
 
-			cout << "Booth's algorithm:" << endl;
-			booths(r1_9, r2_9, mc9, mp9);
+			cout << "Booth's algorithm:" << endl; 
+			booths(r1_9, r2_9, mc9, mp9); //preform Booth's algorithm
 			cout << r1_9 << r2_9 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
-		case 10:
-			string_to_bits(mc10, testinput);
+		case 10:	//length of 10
+			string_to_bits(mc10, testinput); //load values into bitset
 			cout << mc10 << " ";
 
 			file >> testinput;
@@ -157,17 +159,17 @@ int main()
 			cout << mp10 << endl << endl;
 
 			cout << "Add and shift:" << endl;
-			add_and_shift(r1_10, r2_10, mc10, mp10, c_out);
+			add_and_shift(r1_10, r2_10, mc10, mp10, c_out); //preform add_and_shift
 			cout << r1_10 << r2_10 << endl << endl;
 
-			cout << "Booth's algorithm:" << endl;
-			booths(r1_10, r2_10, mc10, mp10);
+			cout << "Booth's algorithm:" << endl; 
+			booths(r1_10, r2_10, mc10, mp10); //preform Booth's algorithm
 			cout << r1_10 << r2_10 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
-		case 11:
-			string_to_bits(mc11, testinput);
+		case 11:	//length of 11
+			string_to_bits(mc11, testinput); //load values into bitset
 			cout << mc11 << " ";
 
 			file >> testinput;
@@ -175,17 +177,17 @@ int main()
 			cout << mp11 << endl << endl;
 
 			cout << "Add and shift:" << endl;
-			add_and_shift(r1_11, r2_11, mc11, mp11, c_out);
+			add_and_shift(r1_11, r2_11, mc11, mp11, c_out); //preform add_and_shift
 			cout << r1_11 << r2_11 << endl << endl;
 
-			cout << "Booth's algorithm:" << endl;
-			booths(r1_11, r2_11, mc11, mp11);
+			cout << "Booth's algorithm:" << endl; 
+			booths(r1_11, r2_11, mc11, mp11); //preform Booth's algorithm
 			cout << r1_11 << r2_11 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
 
-		case 12:
-			string_to_bits(mc12, testinput);
+		case 12:	//length of 12
+			string_to_bits(mc12, testinput); //load values into bitset
 			cout << mc12 << " ";
 
 			file >> testinput;
@@ -193,11 +195,11 @@ int main()
 			cout << mp12 << endl << endl;
 
 			cout << "Add and shift:" << endl;
-			add_and_shift(r1_12, r2_12, mc12, mp12, c_out);
+			add_and_shift(r1_12, r2_12, mc12, mp12, c_out); //preform add_and_shift
 			cout << r1_12 << r2_12 << endl << endl;
 
 			cout << "Booth's algorithm:" << endl;
-			booths(r1_12, r2_12, mc12, mp12);
+			booths(r1_12, r2_12, mc12, mp12); //preform Booth's algorithm
 			cout << r1_12 << r2_12 << endl << endl;
 			cout << "----------------------------------------------------" << endl << endl;
 			break;
