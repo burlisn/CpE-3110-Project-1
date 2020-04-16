@@ -136,5 +136,9 @@ void booths(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp)
             shift_db_bitset(r1, r2, c_out);
         }
     }
+    //I HAVE NO IDEA WHY THIS LAST PART WORKS, BUT IT DOES, DON'T TOUCH IT!!
+    if (bBit[0] == 0b1) {
+        r1 = add_bitset(mc, r1, c_out);
+    }
     return;
 }
