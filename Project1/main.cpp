@@ -21,9 +21,9 @@ int main()
 	bitset <12> mc, mp, r1, r2; //mc=multiplicand, mp=multiplier, r1=more significant resulst, r2=less significant result
 	bitset <1> c_out = 0; //c_out used in add function & shift function
 
+	file >> testinput; //DO NOT DELTE, "PART" OF WHILE LOOP TO MAKE SURE READING IS CORRECT!!!
 	while (file)
 	{
-		file >> testinput;
 		string_to_bits(mc, testinput);
 		cout << mc << " ";
 
@@ -32,7 +32,12 @@ int main()
 		cout << mp << endl;
 
 		add_and_shift(r1, r2, mc, mp, c_out);
-		cout << r1 << r2 << endl;
+		cout << "Add and shift results: \n"<< r1 << r2 << endl;
+
+		booths(r1, r2, mc, mp);
+		cout << "Booth's algorithm results: \n" << r1 << r2 << endl << endl;
+
+		file >> testinput;
 	}
 
 

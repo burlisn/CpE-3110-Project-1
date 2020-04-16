@@ -53,7 +53,7 @@ void string_to_bits(bitset<T> &b1, string input)
     int leadingZeros = T - input.size();
     int numberSize = T - (T-input.size());
 
-    for (int i = T-1; i >= leadingZeros; i--)
+    for (int i = T-1; i >= input.size(); i--)
     {
         b1[i] = 0;
     }
@@ -75,8 +75,8 @@ void string_to_bits(bitset<T> &b1, string input)
         {
             throw out_of_range("non binary string");
         }
-    
     }
+    return;
 }
 
 template <size_t T>
@@ -85,7 +85,7 @@ void add_and_shift(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp, b
     r1 = 0; // Initialized r1 to 0s
     r2 = mp; // Initialize r2 to multiplier
 
-    for (int i = 0; i < 12; i++)
+    for (int i = 0; i < T; i++)
     {
         if (r2[0] == 1)
         {
@@ -103,5 +103,38 @@ void add_and_shift(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp, b
 template <size_t T>
 void booths(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp)
 {
+    bool eBit = 0; //extended bit
+    bitset<1> c_out = 0; //c_out for functions
+    bitset<1> bBit = 0; //bBit = big bit the "13th bit"
+    bitset<T> mcComp = two_comp(mc);
+    r1 = 0; //Initialized r1 to 0s
+    r2 = mp; //Initialize r2 to multiplier
+
+    for (int i = 0; i < T; i++)
+    {
+        if (r2[0] == eBit)
+        {
+            c_out[0] = bBit[0];
+            shift_db_bitset(r1, r2, c_out);
+        }
+        else if (r2[0] == 1 && eBit == 0)
+        {
+            r1=add_bitset(mcComp, r1, c_out);
+            bBit ^= 0b1;
+            bBit ^= c_out;
+            c_out[0] = bBit[0];
+            eBit = r2[0];
+            shift_db_bitset(r1, r2, c_out);
+        }
+        else
+        {
+            r1 = add_bitset(mc, r1, c_out);
+            bBit ^= 0b0;
+            bBit ^= c_out;
+            c_out[0] = bBit[0];
+            eBit = r2[0];
+            shift_db_bitset(r1, r2, c_out);
+        }
+    }
     return;
 }
