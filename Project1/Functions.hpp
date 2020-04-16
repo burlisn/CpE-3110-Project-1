@@ -97,4 +97,11 @@ void add_and_shift(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp, b
             shift_db_bitset(r1, r2, c_out);
         }
     }
+    return;
+}
+
+template <size_t T>
+void booths(bitset<T>& r1, bitset<T>& r2, bitset<T>& mc, bitset<T>& mp)
+{
+    return;
 }
